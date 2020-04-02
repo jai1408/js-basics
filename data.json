@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "text": "learn Javascript",
+        "isComplete": true
+    },
+    {
+        "id": 2,
+        "text": "learn AngularJS",
+        "isComplete": true
+    },
+    {
+        "id": 2,
+        "text": "learn ReactJS",
+        "isComplete": false
+    }
+]
