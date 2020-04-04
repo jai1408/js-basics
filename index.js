@@ -193,3 +193,22 @@ myForm.addEventListener('click', (event) => {
         emailInput.value = '';
     }
 })
+
+console.log('---------------------------------------------------------------------');
+
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 3, 4, 5,];
+console.log(newNumbers);
+
+const obj = {
+    id: 1,
+    name: 'jai'
+};
+
+const newObj = { ...obj, name: 'Mani', age: 12 };
+console.log(newObj);
+
+const filter = (...args) => {
+    return args.filter(x => x % 2 == 0);
+}
+console.log(filter(1, 2, 3, 4, 5, 6, 7, 8));
