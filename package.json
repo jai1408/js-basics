@@ -1,0 +1,31 @@
+{
+  "name": "js-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jai1408/js-basics.git"
+  },
+  "author": "Jai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jai1408/js-basics/issues"
+  },
+  "homepage": "https://github.com/jai1408/js-basics#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

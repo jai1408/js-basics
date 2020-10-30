@@ -1,6 +1,6 @@
 console.log('Hello World !!');
 
-const name = 'jai';
+/*const name = 'jai';
 const age = 30;
 console.log(name);
 console.log(`My name is ${name} and My age is ${age}`);
@@ -109,7 +109,9 @@ console.log(multiplyNums(45, 45));
 
 console.log('---------------------------------------------------------------------');
 
-/** 
+*/
+
+/**
  * ! OOPS in Javascript
  * ! not used since ES6
 function Person(fname, lname, age, dob) {
@@ -126,7 +128,7 @@ function Person(fname, lname, age, dob) {
 Person.prototype.getFullName = function(){
     return `${this.fname} ${this.lname}`;
     }
- 
+
 const person1 = new Person('Jai', 'Mishra', 27, '03-04-1960');
 console.log(person1);
 console.log(person1.getBirthYear());
@@ -134,7 +136,7 @@ console.log(person1.getFullName());
 
 }*/
 
-class Person {
+/*class Person {
     constructor(fname, lname, age, dob) {
         this.fname = fname;
         this.lname = lname;
@@ -211,4 +213,19 @@ console.log(newObj);
 const filter = (...args) => {
     return args.filter(x => x % 2 == 0);
 }
-console.log(filter(1, 2, 3, 4, 5, 6, 7, 8));
+console.log(filter(1, 2, 3, 4, 5, 6, 7, 8));*/
+
+var x = 1;
+a();
+b();
+console.log(x);
+
+function a() {
+    var x = 10;
+    console.log(x);
+}
+
+function b() {
+    var x = 100;
+    console.log(x);
+}
