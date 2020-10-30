@@ -13,12 +13,7 @@ const posts = [
 const users = []
 
 app.get('/posts', authenticateToken, (req, res) => {
-    res.json(posts.filter(post => post.username === req.user.name))
-})
-
-app.get('/login', (req, res) => {
-    //authenticate
-
+    res.json(posts.filter(post => post.username === req.user.username))
 })
 
 app.get('/users', (req, res) => {
@@ -29,7 +24,7 @@ app.post('/users', async (req, res) => {
     try {
         const salt = await bcrypt.genSalt()
         const encryptedPassword = await bcrypt.hash(req.body.password, salt)
-        console.table({ salt: salt, encryptedPassword: encryptedPassword })
+        //console.table({ salt: salt, encryptedPassword: encryptedPassword })
         const user = { username: req.body.username, password: encryptedPassword }
         users.push(user)
         res.status(201).send('user created succesfully')
@@ -45,8 +40,8 @@ app.post('/users/login', async (req, res) => {
     }
     try {
         if (await bcrypt.compare(req.body.password, user.password)) {
-            const user1 = { username: req.body.username }
-            const accessToken = jwt.sign(user1, process.env.ACCESS_SECRET_KEY)
+            //const user = { username: req.body.username }
+            const accessToken = jwt.sign(user, process.env.ACCESS_SECRET_KEY)
             res.json({ accessToken: accessToken })
         }
         else {
@@ -63,7 +58,7 @@ function authenticateToken(req, res, next) {
     if (token == null) return res.sendStatus(401)
 
     jwt.verify(token, process.env.ACCESS_SECRET_KEY, (err, user) => {
-        console.log(err)
+        console.error(err)
         if (err) return res.sendStatus(403)
         req.user = user
         next()
